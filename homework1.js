@@ -145,14 +145,29 @@ const doesItContainOneOrThree = (array) => {
 console.log("Ex9: ", doesItContainOneOrThree([2, 5]))
 
 /*
-
 10)
-
 Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
+*/
+const doesItNotContainOneOrThree = (array) => {
+  if (array.length > 2) {
+    return "The array is too long, give us only two integers"
+  } else {
+    return (
+      "It's " +
+      (array[0] !== 1 && array[0] !== 3 && array[1] !== 1 && array[1] !== 3) +
+      " that the array does not contains 1 or 3"
+    )
+  }
+}
 
+console.log("Ex10: ", doesItNotContainOneOrThree([2, 1]))
+
+/*
 11)
 
 Create a function to find the longest string from a given array of strings.
+/*
+
 
 12)
 
