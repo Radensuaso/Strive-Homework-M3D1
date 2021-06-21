@@ -199,6 +199,12 @@ order of characters
     reverse('Greetings!') === '!sgniteerG'
  */
 
+function reverseString(string) {
+  return string.split("").reverse().join("")
+}
+
+console.log("Ex7: ", reverseString("wheel of time"))
+
 /* 8) CHUNK
 
 Given an array and chunk size, divide the array into many subarrays
