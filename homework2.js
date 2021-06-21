@@ -178,6 +178,15 @@ step has spaces on the right hand side!
         '### '
         '####' */
 
+const stepIt = (number) => {
+  console.log("Ex6: ")
+  for (let i = 1; i <= number; i++) {
+    console.log("'" + "#".repeat(i) + " ".repeat(number - i) + "'")
+  }
+}
+
+stepIt(5)
+
 /* 7) REVERSE STRING
 
 Given a string, return a new string with the reversed
