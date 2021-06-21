@@ -113,11 +113,36 @@ console.log("Ex7: ", displayLosNew("New Orleans"))
 Create a function to calculate the sum of three elements of a given array of integers of length 3.
 */
 
+const calculateSumOfArray = (array) => {
+  if (array.length > 3) {
+    return "The array is too long, give us only three integers"
+  } else {
+    return (
+      "The sum of the three integers is " + (array[0] + array[1] + array[2])
+    )
+  }
+}
+
+console.log("Ex8: ", calculateSumOfArray([2, 4, 5]))
 /*
 
 9)
 Create a function to test whether an array of integers of length 2 contains 1 or a 3. 
 */
+
+const doesItContainOneOrThree = (array) => {
+  if (array.length > 2) {
+    return "The array is too long, give us only two integers"
+  } else {
+    return (
+      "It's " +
+      (array[0] === 1 || array[0] === 3 || array[1] === 1 || array[1] === 3) +
+      " that the array contains 1 or 3"
+    )
+  }
+}
+
+console.log("Ex9: ", doesItContainOneOrThree([2, 5]))
 
 /*
 
