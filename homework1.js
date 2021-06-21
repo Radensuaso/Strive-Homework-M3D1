@@ -31,16 +31,16 @@ Create a function to remove a character at the specified position of a given str
 
 const removeChar = (string, n) => {
   const stringArray = string.split("")
-  for (let i = 0; i < stringArray.length; i++) {
+  for (let i = 0; i <= stringArray.length; i++) {
     if (i === n) {
-      stringArray.splice(i, 1)
+      stringArray.splice(i - 1, 1)
       break
     }
   }
   return stringArray.join("")
 }
 
-console.log("Ex3: ", removeChar("andré", 2))
+console.log("Ex3: ", removeChar("andré", 5))
 /*
 
 4)
@@ -82,8 +82,17 @@ console.log("Ex5: ", checkRange(31, 100))
 Create a function to create a new string of specified copies (positive number) of a given string.
 */
 
-/*
+const createCopies = (string, n) => {
+  const arrayOfStrings = []
+  for (let i = 0; i < n; i++) {
+    arrayOfStrings.push(string)
+  }
+  return arrayOfStrings.join("")
+}
 
+console.log("Ex6: ", createCopies("strive", 5))
+
+/*
 7)
 Create a function to display the city name if the string begins with "Los" or "New" otherwise return blank.
 */
