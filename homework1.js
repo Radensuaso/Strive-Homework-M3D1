@@ -170,7 +170,7 @@ Create a function to find the longest string from a given array of strings.
 const findLongestString = (stringsArray) => {
   let longestLength = stringsArray[0].length
   let longestString = stringsArray[0]
-  for (let i = 0; i < stringsArray.length; i++) {
+  for (let i = 1; i < stringsArray.length; i++) {
     if (stringsArray[i].length > longestLength) {
       longestLength = stringsArray[i].length
       longestString = stringsArray[i]
@@ -232,11 +232,27 @@ console.log("Ex12: ", whatKindOfAngle(90))
 Create a function to find the index of the greatest element of a given array of integers
 */
 
+const findIndexOfTheGreatestInteger = (integers) => {
+  let greatestInteger = integers[0]
+  let greatestIntegerIndex
+  for (let i = 1; i < integers.length; i++) {
+    if (integers[i] > greatestInteger) {
+      greatestInteger = integers[i]
+      greatestIntegerIndex = i
+    }
+  }
+  return "The index of the greatest integer is " + greatestIntegerIndex
+}
+
+console.log("Ex13: ", findIndexOfTheGreatestInteger([50, 2, 515, 4, 77]))
+
 /*
 14)
 
 Create a function to get the largest even number from an array of integers.
+*/
 
+/*
 15)
 
 Create a function to check from two given integers, whether one is positive and another one is negative.
