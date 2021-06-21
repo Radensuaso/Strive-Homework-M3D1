@@ -306,9 +306,20 @@ console.log("Ex16: ", convertFirstThreeChars("Strive School"))
 
 /*
 17)
-
 Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
+*/
+const sixtyFiveOrEighty = (x, y) => {
+  const sum = x + y
+  if (sum >= 50 && sum <= 80) {
+    return 65
+  } else {
+    return 80
+  }
+}
 
+console.log("Ex17: ", sixtyFiveOrEighty(25, 30))
+
+/*
 18)
 
 Create a function to convert a number to a string, the contents of which depend on the number's factors. Follow next example:
