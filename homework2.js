@@ -254,6 +254,23 @@ pyramid has spaces on both the left and right hand sides
         ' ### '
         '#####' */
 
+const pyramidIt = (number) => {
+  console.log("Ex6: ")
+  for (let i = 1; i <= number; i++) {
+    console.log(
+      "'" +
+        " ".repeat(number - i) +
+        "#".repeat(i - 1) +
+        "#" +
+        "#".repeat(i - 1) +
+        " ".repeat(number - i) +
+        "'"
+    )
+  }
+}
+
+pyramidIt(7)
+
 /* 10) SPYRAL MATRIX
 
 Write a function that accepts an integer N
