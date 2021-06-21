@@ -97,6 +97,17 @@ console.log("Ex6: ", createCopies("strive", 5))
 Create a function to display the city name if the string begins with "Los" or "New" otherwise return blank.
 */
 
+const displayLosNew = (city) => {
+  const firstThreeChars = city.substring(0, 3)
+  if (firstThreeChars === "Los" || firstThreeChars === "New") {
+    return city
+  } else {
+    return "blank"
+  }
+}
+
+console.log("Ex7: ", displayLosNew("New Orleans"))
+
 /*
 8)
 Create a function to calculate the sum of three elements of a given array of integers of length 3.
