@@ -112,8 +112,16 @@ and punctuation in determining if the string is a palindrome.
 --- Examples:
 
     palindrome("abba") === true
-    palindrome("abcdefg") === false
- */
+    palindrome("abcdefg") === false*/
+
+const isItPalindrome = (string) => {
+  const reversedString = string.split("").reverse().join("")
+  return `It's ${
+    string.toUpperCase() === reversedString.toUpperCase()
+  } that ${string} is a Palindrome.`
+}
+
+console.log("Ex4: ", isItPalindrome("!Level!"))
 
 /* 5) REVERSE INT
 
