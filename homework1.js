@@ -284,9 +284,27 @@ console.log("Ex15: ", isItPositiveAndNegative(-50, 2))
 
 /*
 16)
-
 Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case. 
+*/
+function convertFirstThreeChars(string) {
+  const stringCharsArray = string.split("")
+  if (string.length < 3) {
+    stringCharsArray[0] = stringCharsArray[0].toUpperCase()
+    stringCharsArray[1] = stringCharsArray[1].toUpperCase()
+  } else {
+    stringCharsArray[0] = stringCharsArray[0].toLowerCase()
+    stringCharsArray[1] = stringCharsArray[1].toLowerCase()
+    stringCharsArray[2] = stringCharsArray[2].toLowerCase()
+    for (let i = 3; i < stringCharsArray.length; i++) {
+      stringCharsArray[i] = stringCharsArray[i].toUpperCase()
+    }
+  }
+  return stringCharsArray.join("")
+}
 
+console.log("Ex16: ", convertFirstThreeChars("Strive School"))
+
+/*
 17)
 
 Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
