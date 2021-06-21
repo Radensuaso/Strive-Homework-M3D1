@@ -7,6 +7,20 @@ commonly used in the string.
     maxChar("abcccccccd") === "c"
     maxChar("apple 1231111") === "1"
 */
+const getMaxChar = (string) => {
+  var max = 0
+  const stringArray = string.split("")
+  maxChar = ""
+  stringArray.forEach(function (char) {
+    if (string.split(char).length > max) {
+      max = string.split(char).length
+      maxChar = char
+    }
+  })
+  return maxChar
+}
+
+console.log("Ex1: ", getMaxChar("asdsassssaaxcxx"))
 
 /* 2) ANAGRAMS
 
