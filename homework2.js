@@ -137,6 +137,25 @@ ordering of numbers.
     reverseInt(-90) === -9
  */
 
+const reverseInt = (integer) => {
+  const positiveInteger = Math.abs(integer)
+  const reversedPositiveIntegerString = positiveInteger
+    .toString()
+    .split("")
+    .reverse()
+    .join("")
+  const reversedPositiveInteger = parseInt(reversedPositiveIntegerString)
+  if (integer < 0) {
+    return -Math.abs(reversedPositiveInteger)
+  } else if (integer > 0) {
+    return reversedPositiveInteger
+  } else if (integer === 0) {
+    return 0
+  }
+}
+
+console.log("Ex5: ", reverseInt(-521))
+
 /* 6) STEPS
 
 Write a function that accepts a positive number N.
