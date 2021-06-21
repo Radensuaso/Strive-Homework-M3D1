@@ -218,6 +218,22 @@ where each subarray is of length size
     chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
     chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 */
+function chunkIt(array, number) {
+  const chunks = []
+  for (let i = 0; i < array.length; i += number) {
+    const chunk = []
+    for (let j = 0; j < number; j++) {
+      if (array[i + j] === undefined) {
+        break
+      }
+      chunk.push(array[i + j])
+    }
+    chunks.push(chunk)
+  }
+  return chunks
+}
+
+console.log("Ex8: ", chunkIt([1, 2, 3, 4, 5, 6, 7, 8], 3))
 
 /* 9) PYRAMID
 
