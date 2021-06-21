@@ -35,6 +35,29 @@ or punctuation.  Consider capital letters to be the same as lower case
   anagrams('Hi there', 'Bye there') --> False
 */
 
+function checkAnagrams(string1, string2) {
+  const arrayChars1 = string1.split("")
+  const arrayOnlyLetters1 = []
+  for (const char of arrayChars1) {
+    if (/[a-zA-Z]/.test(char)) arrayOnlyLetters1.push(char.toUpperCase())
+  }
+
+  const arrayChars2 = string2.split("")
+  const arrayOnlyLetters2 = []
+  for (const char of arrayChars2) {
+    if (/[a-zA-Z]/.test(char)) arrayOnlyLetters2.push(char.toUpperCase())
+  }
+
+  const sortedString1 = arrayOnlyLetters1.sort().join("")
+  const sortedString2 = arrayOnlyLetters2.sort().join("")
+
+  return `It's ${
+    sortedString1 === sortedString2
+  } that ${string1} and ${string2} are anagrams.`
+}
+
+console.log("Ex2: ", checkAnagrams("Radensuaso!", "Andre Sousa"))
+
 /* 3) ANAGRAMS 2
 
 Given a word and a list of possible anagrams, select the correct sublist.
