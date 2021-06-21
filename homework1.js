@@ -248,9 +248,26 @@ console.log("Ex13: ", findIndexOfTheGreatestInteger([50, 2, 515, 4, 77]))
 
 /*
 14)
-
 Create a function to get the largest even number from an array of integers.
 */
+const findTheGreatestEvenInteger = (integers) => {
+  const evenIntegers = []
+  for (const integer of integers) {
+    if (integer % 2 === 0) {
+      evenIntegers.push(integer)
+    }
+  }
+
+  let greatestEvenInteger = evenIntegers[0]
+  for (let i = 1; i < evenIntegers.length; i++) {
+    if (evenIntegers[i] > greatestEvenInteger) {
+      greatestEvenInteger = evenIntegers[i]
+    }
+  }
+  return "The greatest even integer is " + greatestEvenInteger
+}
+
+console.log("Ex14: ", findTheGreatestEvenInteger([2, 5555, 20, 42, 3]))
 
 /*
 15)
