@@ -166,8 +166,37 @@ console.log("Ex10: ", doesItNotContainOneOrThree([2, 1]))
 11)
 
 Create a function to find the longest string from a given array of strings.
-/*
+*/
+const findLongestString = (stringsArray) => {
+  let longestLength = stringsArray[0].length
+  let longestString = stringsArray[0]
+  for (let i = 0; i < stringsArray.length; i++) {
+    if (stringsArray[i].length > longestLength) {
+      longestLength = stringsArray[i].length
+      longestString = stringsArray[i]
+    }
+  }
+  return "The longest string in the array is " + longestString
+}
 
+console.log(
+  "Ex11: ",
+  findLongestString([
+    "Hey",
+    "who's",
+    "is",
+    "bigger",
+    "one",
+    "here",
+    "I'll",
+    "fight",
+    "him",
+    "to",
+    "the",
+    "death",
+  ])
+)
+/*
 
 12)
 
@@ -179,6 +208,9 @@ Types of angles:
     btuse angle: An angle between 90 and 180 degrees.
     Straight angle: A 180 degree angle.
 
+*/
+
+/*
 13)
 
 Create a function to find the index of the greatest element of a given array of integers
