@@ -205,16 +205,34 @@ Create a function to find the types of a given angle.
 Types of angles:
     Acute angle: An angle between 0 and 90 degrees.
     Right angle: An 90 degree angle.
-    btuse angle: An angle between 90 and 180 degrees.
+    obtuse angle: An angle between 90 and 180 degrees.
     Straight angle: A 180 degree angle.
 
 */
+
+function whatKindOfAngle(angle) {
+  if (angle > 0 && angle < 90) {
+    return "The angle given is an acute angle."
+  } else if (angle === 90) {
+    return "The angle given is a right angle."
+  } else if (angle > 90 && angle < 180) {
+    return "The angle given is an obtuse angle."
+  } else if (angle === 180) {
+    return "The angle given is a straight angle."
+  } else {
+    return "Not a valid angle"
+  }
+}
+
+console.log("Ex12: ", whatKindOfAngle(90))
 
 /*
 13)
 
 Create a function to find the index of the greatest element of a given array of integers
+*/
 
+/*
 14)
 
 Create a function to get the largest even number from an array of integers.
