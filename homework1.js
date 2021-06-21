@@ -367,5 +367,15 @@ console.log("Ex18: ", convertNumberToString(30))
 /*
 19)
 Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
-
 */
+function turnToAcronym(phrase) {
+  const wordsArray = phrase.split(" ")
+  const acronym = []
+  for (let i = 0; i < wordsArray.length; i++) {
+    const word = wordsArray[i]
+    acronym.push(word[0])
+  }
+  return acronym.join("").toUpperCase()
+}
+
+console.log("Ex19: ", turnToAcronym("you only live once"))
