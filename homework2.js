@@ -41,14 +41,13 @@ function checkAnagrams(string1, string2) {
   for (const char of arrayChars1) {
     if (/[a-zA-Z]/.test(char)) arrayOnlyLetters1.push(char.toUpperCase())
   }
+  const sortedString1 = arrayOnlyLetters1.sort().join("")
 
   const arrayChars2 = string2.split("")
   const arrayOnlyLetters2 = []
   for (const char of arrayChars2) {
     if (/[a-zA-Z]/.test(char)) arrayOnlyLetters2.push(char.toUpperCase())
   }
-
-  const sortedString1 = arrayOnlyLetters1.sort().join("")
   const sortedString2 = arrayOnlyLetters2.sort().join("")
 
   return `It's ${
@@ -66,6 +65,42 @@ Given a word and a list of possible anagrams, select the correct sublist.
 
     "listen" and a list of candidates like "enlists" "google" "inlets" "banana" the program should return a list containing "inlets".
 */
+
+function checkAnagramsList(string1, list) {
+  const arrayChars1 = string1.split("")
+  const arrayOnlyLetters1 = []
+  for (const char of arrayChars1) {
+    if (/[a-zA-Z]/.test(char)) arrayOnlyLetters1.push(char.toUpperCase())
+  }
+  const sortedString1 = arrayOnlyLetters1.sort().join("")
+
+  const arrayOfMatchingAnagrams = []
+  for (const string2 of list) {
+    const arrayChars2 = string2.split("")
+    const arrayOnlyLetters2 = []
+    for (const char of arrayChars2) {
+      if (/[a-zA-Z]/.test(char)) arrayOnlyLetters2.push(char.toUpperCase())
+    }
+    const sortedString2 = arrayOnlyLetters2.sort().join("")
+    if (sortedString1 === sortedString2) {
+      arrayOfMatchingAnagrams.push(string2)
+    }
+  }
+
+  return arrayOfMatchingAnagrams
+}
+
+console.log(
+  "Ex3: ",
+  checkAnagramsList("Andre Sousa", [
+    "Radensuaso!",
+    "Gary",
+    "?Nauseas Rod",
+    "Bern",
+    "what?",
+    "Auras Nodes",
+  ])
+)
 
 /* 4) PALINDROME
 
