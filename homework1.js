@@ -335,7 +335,36 @@ this would be a simple "Stefano".
 this would be a "DiegoRiccardo".
 34 has four factors: 1, 2, 17, and 34.
 this would be "34".
+*/
+function convertNumberToString(number) {
+  const arrayOfResults = []
+  //factor 3
+  const factorThree = number / 3
+  if (Number.isInteger(factorThree)) {
+    arrayOfResults.push("Diego")
+  }
+  //factor 5
+  const factorFive = number / 5
+  if (Number.isInteger(factorFive)) {
+    arrayOfResults.push("Riccardo")
+  }
+  //factor 7
+  const factorSeven = number / 7
+  if (Number.isInteger(factorSeven)) {
+    arrayOfResults.push("Stefano")
+  }
 
+  //result
+  if (arrayOfResults[0] === undefined) {
+    return number
+  } else {
+    return arrayOfResults.join("")
+  }
+}
+
+console.log("Ex18: ", convertNumberToString(30))
+
+/*
 19)
 Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
 
